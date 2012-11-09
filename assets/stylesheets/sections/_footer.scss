@@ -1,3 +1,27 @@
-footer._footer {
-
+#Footer {
+	width: 320px;
+	background: image-url("footer_bg.jpg") no-repeat 0 0;
+	padding: 14px 10px;
+	div{
+		text-align: center;
+		.mw_currency{
+			margin-bottom: 5px;
+		}
+		.mw_moovweb{
+			span{
+				margin-top: 15px;
+				margin-bottom: 5px;
+				display: block;
+				font-style: italic;
+			}
+			img{
+				display: block;
+				margin: auto;
+			}
+		}
+		span{
+			color: #d3b4af;
+			font-size: 11px;
+		}
+	}
 }

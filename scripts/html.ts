@@ -4,7 +4,8 @@ $("/html") {
   rewrite_links()
   absolutize_srcs()
 
-  
+  remove_external_styles()
+	remove_internal_styles()
 
   add_assets()
 

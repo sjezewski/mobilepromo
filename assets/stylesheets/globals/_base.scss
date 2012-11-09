@@ -4,3 +4,40 @@
 
 @import "bourbon/_bourbon";
 
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+#Container{
+	width: 320px;
+	@include clearfix();
+}
+#AjaxLoading {
+	display: none;
+	text-align: center;
+	background: #FCF5AA;
+	width: 180px;
+	z-index: 10000000000;
+	padding: 5px 10px;
+	img {
+		vertical-align: bottom;
+		margin-right: 5px;
+	}
+
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+}
