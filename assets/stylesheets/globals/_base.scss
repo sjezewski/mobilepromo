@@ -11,9 +11,21 @@ body {
 	padding: 0;
 	margin: 0;
 }
+h1, h2, h3, h4{
+	margin: 0;
+	padding: 0;
+}
+h2{
+	margin: 5px 0 10px;
+}
 #Container{
 	width: 320px;
 	@include clearfix();
+}
+.Content{
+	background: image-url("content_top.png") repeat-x 0 0;
+	@include clearfix();
+	padding: 15px 10px;
 }
 #AjaxLoading {
 	display: none;
@@ -36,8 +48,23 @@ ul{
 	padding: 0;
 	li {
 		list-style: none;
-		float: left;
 		margin: 0;
 		padding: 0;
 	}
+}
+.FeedLink{
+	display: none;
+}
+.Right{
+	display: none;
+}
+.QuickViewBtn{
+	display: none !important;
+}
+.Clear {
+	display: none;
+}
+.Block{
+	margin-bottom: 5px;
+	@include clearfix();
 }

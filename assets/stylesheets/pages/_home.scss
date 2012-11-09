@@ -1,5 +1,57 @@
 // Every page should have a class on the body
 // Scope that in each file at the start
-._home {
-  
+.mw_home {
+  	.Left{
+		display: none;
+	}
+	
+	.ProductList{
+		strong a {
+			color: #075899;
+		}
+		li{
+			background-color: #f0f0f0;
+			border: 1px solid #e5e5e5;
+			width: 284px !important;
+			height: auto !important;
+			padding: 8px;
+			margin-bottom: 10px;
+			@include clearfix();
+			.ProductDetails{
+				margin-bottom: 10px;
+				height: auto !important;
+			}
+			.ProductImage{
+				float: left;
+				margin-right: 10px;
+			}
+			.ProductPriceRating{
+				height: auto !important;
+				em {
+					color: #F33;
+				}	
+				span{
+					display: block;
+				}
+			}
+			.Rating {
+				color: #797979;
+			}
+			.ProductActionAdd{
+				background-color: #6a1802;
+				border: 1px solid #661200;
+				text-align: center;
+				@include border-radius(6px);
+				margin-left: 130px;
+				width: 105px;
+				margin-top: 20px;
+				a{
+					color: #fff;
+					font-size: 11px;
+					padding: 4px;
+					display: block;
+				}
+			}
+		}
+	}
 }

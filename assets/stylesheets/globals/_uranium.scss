@@ -1,0 +1,34 @@
+/*** Toggler ***/
+*[data-ur-set='toggler'] {
+  /* By Default content is hidden*/
+  *[data-ur-toggler-component='content'] {
+    display:none;
+  }
+  *[data-ur-toggler-component='content'][data-ur-state='enabled'] {
+    display: block;
+  }
+}
+
+/**** Carousel ****/
+div[data-ur-carousel-component="view_container"] {
+  width: 100%;
+  overflow-x: hidden;
+  position:relative
+}
+div[data-ur-carousel-component="scroll_container"] > * {
+  display: inline-block;
+  float: left;
+}
+div[data-ur-carousel-component="button"][data-ur-state="disabled"] {
+  opacity: 0;
+}
+
+/*** Tabs ***/
+*[data-ur-set="tabs"] {
+	*[data-ur-tabs-component='content'] {
+       display:none;
+     }
+     *[data-ur-tabs-component='content'][data-ur-state='enabled'] {
+       display: block;
+     }
+}
