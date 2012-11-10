@@ -35,25 +35,11 @@ $("./body") {
 
 							
 
-							$("./div[@class='FloatRight SortBox']") {
-								attribute("data-ur-set", "select-list")
-								
+							$("./div[@class='FloatRight SortBox']") {			
 								$("./form") {
-									$("./select") {
-										attribute("data-ur-select-list-component", "select")
-									}
-								}
-								
-								insert_top("ul", data-ur-select-list-component: "content"){
-									insert("li", value: "featured", "Featured Items")
-									insert("li", value: "newest", "Newest Items")
-									insert("li", value: "bestselling", "Bestselling")
-									insert("li", value: "alphaasc", "Alphabetical: A to Z")
-									insert("li", value: "alphadesc", "Alphabetical: Z to A")
-									insert("li", value: "avgcustomerreview", "Avg. Customer Review")
-									insert("li", value: "priceasc", "Price: Low to High")
-									insert("li", value: "pricedesc", "Price: High to Low")							
-								}
+									# Wrap "Sort by"" text with <span> tag"
+									wrap_text_children("span")
+								}				
 							}
 						
 						}

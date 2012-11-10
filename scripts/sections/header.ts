@@ -2,32 +2,46 @@ $('./body') {
  	$("./div[@id='Container']") {
  		$("./div[@id='Outer']") {
  			$("./div[@id='Header']") {
-				# Toggler container
+	
+				# Declare toggler container
 				attribute("data-ur-set", "toggler")
 				
  				$("./div[@id='Logo']") {
  					
-					# Move #TopMenu into #Logo
+					# Move top menu into #Logo container
 					move_here("../../../div[@id='TopMenu']", "bottom"){
+						
 						$("./ul") {
-							# Remove unwanted menu items
+							
+							# Remove unwanted top menu items from upper menu
 							$("./li[position() = 1 or position() > 2 and not(position()=last()-1)]") {
 								remove()
 							}			
+							
 						}
 					}
 
-					# Insert Menu and Search
+					# Process Menu and Search form
 					insert_bottom("div", class: "mw_mobile_menu"){						
+						
+						# Insert container element for menu button
 						insert("div", class: "mw_menu_btn"){
-							# Toggler button
+							
+							# Declare toggler button which enable/disable toggler content
 							attribute("data-ur-toggler-component", "button")
+							
+							# Insert inner text of menu button
 							insert("span", "Menu")
+							
 						}
+						
+						# Insert container element for search form
 						insert("div", class: "mw_search"){
-							# Move search form to mobile menu
+							
+							# Move search form into container element
 							move_here("../../../div[@id='SearchForm']", "bottom"){
-								# Removal of unwanted content 
+							
+								# Removal of unwanted content from search form
 								$("./p") {
 									remove()
 								}
@@ -35,10 +49,12 @@ $('./body') {
 									$("./label") {
 										remove()
 									}
-									# Set search button background image
+									
+									# Change search button background image
 									$("./input[@type='image']") {
 										attribute("src", asset("images/search.png"))
 									}
+									
 								}
 							}
 						}						
@@ -46,14 +62,20 @@ $('./body') {
 					
  				}												
 
+				# Remove br tag
 				$("./br") {
 					remove()
 				}
 				
 				# Move menu items into #Header
 				move_here("../div[@id='Menu']", "bottom"){
+					
+					# Declare toggler content element which is enabled/diabled by toggler button
 					attribute("data-ur-toggler-component", "content")
+					
+					# Move "Category List" element on bottom of #Menu element
 					move_here("../../div[@id='Wrapper']/div[@class='Left']/div[@id='SideCategoryList']", "bottom")
+					
 				}
 				
  			}

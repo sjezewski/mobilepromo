@@ -22,6 +22,9 @@ match($status) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
+			with(/headphones/) {
+				@import pages/headphones.ts
+			}
 			with(/shop-iphone/) {
 				@import pages/iphone.ts
 			}

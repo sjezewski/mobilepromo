@@ -26,22 +26,30 @@ h2{
 	background: image-url("content_top.png") repeat-x 0 0;
 	@include clearfix();
 	padding: 15px 10px;
+	h3 {
+		margin-bottom: 5px;
+	}
 }
 #AjaxLoading {
 	display: none;
 	text-align: center;
 	background: #FCF5AA;
-	width: 180px;
-	z-index: 10000000000;
-	padding: 5px 10px;
+	width: 300px;
+	z-index: 999 !important;
+	padding: 22px 10px;
+	left: 0 !important;
 	img {
 		vertical-align: bottom;
-		margin-right: 5px;
+		display: block;
+		margin: 10px auto;
 	}
 
 }
 a{
 	text-decoration: none;
+}
+.Content a {
+	color: #075899;
 }
 ul{
 	margin: 0;
@@ -58,13 +66,20 @@ ul{
 .Right{
 	display: none;
 }
-.QuickViewBtn, .BrandList, .NewsletterSubscription, .CompareButton, .FeedLink, #CategoryBreadcrumb, .Clear{
+.QuickViewBtn, .BrandList, .NewsletterSubscription, .CompareButton, .FeedLink, #CategoryBreadcrumb, .Clear, .Breadcrumb{
 	display: none !important;
 }
 .Block{
 	margin-bottom: 5px;
 	@include clearfix();
 }
+[mw_class='hide']{
+	display: none;
+}
+
+
+
+
 
 .ProductList{
 	strong a {
@@ -123,5 +138,173 @@ ul{
 		.ProductCompareButton{
 			display: none;
 		}
+	}
+}
+#ModalOverlay {
+	background-color: black;
+}
+#ModalContainer {
+	left: 0;
+	top: 0 !important;
+	width: 320px !important;
+	margin-left: 0 !important;
+	background-color: #822700;
+	background: image-url("header_bg.jpg") no-repeat 0 0;
+}
+
+.modalClose {
+	z-index: 100000;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	height: 32px;
+	width: 43px !important;
+	left: 10px;
+	top: 9px;
+	background: image-url('back.png') no-repeat 0 0 !important;
+	text-align: left !important;
+	text-indent: -9999px !important;
+}
+
+#ModalLoadingOverlay {
+	background: #000;
+	cursor: pointer;
+}
+
+#ModalLoadingIndicator {
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
+	background: url(loading.gif) no-repeat;
+	position: static;
+	top: 50%;
+	left: 50%;
+	z-index: 30001;
+}
+
+#ModalContentContainer {
+	-webkit-background-clip: padding-box;
+	margin-top: 49px;
+}
+
+#ModalTitle, .ModalTitle {
+	background: #f2f4f7;
+	color: #313131;
+	font-size: 110%;
+	font-weight: bold;
+	padding: 0px;
+	border-bottom-color: #b8b8b8;
+	-webkit-background-clip: padding-box;
+	text-align: left;
+}
+
+#ModalContent, .ModalContent {
+	border-bottom: 1px solid #606263;
+	border-top-width: 0;
+	background: #fff;
+	margin: 0;
+	text-align: left;
+	color: #444;
+	padding: 10px 10px 10px;
+	margin-top: 25px;
+	margin: 0;
+}
+
+#ModalContent a, .ModalContent a {
+    color: #444;
+}
+
+.ModalContentWithButtons .ModalContent, .ModalContentWithButtons #ModalContent {
+	margin-bottom: 0;
+	border-bottom-width: 0;
+}
+
+#ModalButtonRow, .ModalButtonRow {
+	border: 1px solid #606263;
+	border-top-color: #919394;
+	background: #e7ebf0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-background-clip: padding-box;
+	text-align: right;
+	padding: 4px 8px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#ModalButtonRow input, .ModalButtonRow input {
+	text-align: center;
+}
+
+#ModalButtonRow input.Submit, .ModalButtonRow input.Submit,
+#ModalButtonRow input.SubmitButton, .ModalButtonRow input.SubmitButton {
+	font-weight: bold;
+}
+
+#fastCartContainer {
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 13px;
+}
+.fastCartContent h2 {
+	color: #292929;
+	background-color:transparent;
+}
+.fastCartContent h3 {
+	color: #BB6F21;
+	background-color:transparent;
+}
+.fastCartSummaryBox {
+	background-color: #F1F1F1;
+	line-height: 160%;
+	border: 1px solid #CCC;
+}
+.fastCartItemBox a{
+	font-size: 14px;
+}
+.fastCartContent .fastCartTop a,
+.fastCartContent .ProductList .ProductDetails a {
+	color: #075899;
+}
+.fastCartContent .ProductPrice,
+.fastCartContent .ProductList em {
+	color: #800000;
+}
+.fastCartContent .Quantity {
+	color: #828DB3;
+}
+.fastCartContent p {
+	color: #444444;
+}
+.fastCartContent .ProductList li {
+	background-color: #f0f0f0;
+}
+
+.fastCartTop{
+	margin-top: 20px;
+	.fastCartThumb{
+		float: left;
+		margin-bottom: 10px;
+	}
+	.fastCartSummaryBox{
+		clear: both;
+		margin-top: 15px;
+		padding: 20px 10px 10px;
+		text-align: center;
+	}
+}
+.actionLink{
+	margin-top: 5px;
+	a{
+		display: block;
+		background-color: #4a0b00;
+		color: #fff !important;
+		width: 130px;
+		@include border-radius(10px);
+		margin: auto;
+		font-size: 11px;
+		padding: 2px 5px 2px;
 	}
 }

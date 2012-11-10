@@ -1,10 +1,12 @@
 .mw_iphone{
 	.Content{
 		background: none;
+		padding-top: 0;
 		a {
 			color: #075899;
 		}
 		.SubCategoryList, .SubBrandList {
+			margin-top: 20px;
 			background: #EEF5F9;
 			ul{
 				list-style: none;
@@ -16,11 +18,33 @@
 				}
 			}
 		}
-		
+		.SortBox{
+			background: #812600;
+			border: 1px solid #5f0f02;
+			font-weight: bold;
+			padding: 12px 10px 9px;
+			margin: 0;
+			color: #fff;
+			background: image-url("plus.png") no-repeat 95% center #812600;
+			@include border-radius(5px);
+			select{
+				background: none;
+				border: none;
+				color: #fff;
+				font-size: 14px;
+				vertical-align: middle;
+				margin-left: 40px;
+				margin-top: 0px;
+				padding-top: 0px;
+			}
+		}
 	}
 	.Left{
 		background: image-url("content_top.png") repeat-x 0 0;
 		padding-top: 20px;
+		> h2{
+			margin-bottom: 15px;
+		}
 		.ShopByPrice{
 			h2{
 				background: image-url("plus.png") no-repeat 95% center #812600;
