@@ -96,9 +96,10 @@
 	}
 	#Menu{
 		border-top: 1px solid #EBE4C7;
+		border-bottom: 1px solid #816C18;
 		ul{
 			padding: 2px 0 0;
-			background-color: #D8D3B8;
+			background-color: #F5F2E1;
 			@include clearfix();
 			li{
 				display: block;
@@ -123,7 +124,7 @@
 				color: #fff;
 			}
 			ul{
-				background-color: #D8D3B8;	
+				background-color: #F5F2E1;	
 				a{
 					padding: 10px 10px 9px;
 				}

@@ -24,6 +24,7 @@ $("./body") {
 				insert("img", src: asset("images/moovweb.png"))
 			}			
 			
+			# Remove unwanded elements
 			$("./*[not(self::div)]") {
 				remove()
 			}			
