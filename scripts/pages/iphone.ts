@@ -19,8 +19,7 @@ $("./body") {
 						$("./div") {
 							attribute("data-ur-toggler-component", "content")
 						}
-						
-						
+												
 					}
 				}
 				
@@ -32,9 +31,7 @@ $("./body") {
 							$("./h2") {
 								move_to("../../../../div[@class='Left']", "top")
 							}	
-
 							
-
 							$("./div[@class='FloatRight SortBox']") {			
 								$("./form") {
 									# Wrap "Sort by"" text with <span> tag"

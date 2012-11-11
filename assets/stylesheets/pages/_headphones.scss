@@ -89,7 +89,9 @@
 		}
 		.FindByCategory{
 			ul{
-				margin-left: 5px;
+				margin: 0px;
+				background-color: #E5F8FF;
+				padding: 5px;
 				li{
 					list-style: none;
 					background: image-url("breadcrumb.png") no-repeat left center;
