@@ -25,6 +25,9 @@ match($status) {
 			with(/cart/) {
 				@import pages/cart.ts
 			}
+			with(/checkout/) {
+				@import pages/checkout.ts
+			}
 			with(/headphones/) {
 				@import pages/headphones.ts
 			}

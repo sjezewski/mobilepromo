@@ -115,11 +115,11 @@
 		}
 	}
 	.ProceedToCheckout{
-		text-align: right;
+		text-align: center;
 		margin-top: 20px;
 	}
 	.AlternativeCheckout{
-		text-align: right;
+		text-align: center;
 		a {
 			display: inline-block;
 			background-color: #6a1800;
@@ -127,7 +127,7 @@
 			width: 200px;
 			@include border-radius(6px);
 			font-size: 12px;
-			padding: 6px 5px 5px;
+			padding: 5px 4px 4px;
 			text-align: center;
 			text-shadow: 1px 1px 0px #222;
 		}
