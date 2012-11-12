@@ -1,5 +1,5 @@
 $("./body") {
-	$("./div[@id='Footer']") {
+	$(".//div[@id='Footer']") {
 
 		$("./p") {
 			

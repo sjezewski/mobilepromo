@@ -5,6 +5,19 @@ $("./body") {
 		$("./div[@id='Outer']") {
 			$("./div[@id='Wrapper']") {
 				$("./div[@class='Content']") {
+
+					$("./div[@id='CartHeader']") {
+						$("./h2") {
+							$("./span") {
+								$("./a") {
+									$("./img") {
+										attribute("src", asset("images/ProceedToCheckout.png"))
+									}
+								}
+							}
+						}
+					}
+
 					$("./div[@id='CartContent']") {
 						$("./div[@class='BlockContent']") {
 							$("./div") {

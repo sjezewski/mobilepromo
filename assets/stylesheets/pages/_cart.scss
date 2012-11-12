@@ -11,6 +11,13 @@
 	.SideRecentlyViewed{
 		display: none;
 	}
+	#CartHeader{
+		h2{
+			span{
+				display: none;
+			}
+		}
+	}
 	#cartForm{
 		> .FloatLeft{
 			margin-top: 10px;
@@ -23,6 +30,7 @@
 					background-color: #F2F2F2;
 					border: 1px solid #C4C4C4;
 					padding: 8px;
+					margin-bottom: 8px;
 					.CartThumb{
 						display: inline-block;
 						img{

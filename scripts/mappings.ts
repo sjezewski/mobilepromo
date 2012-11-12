@@ -18,6 +18,11 @@ match($status) {
     log("--> STATUS: 200")
 
     match($path) {
+			$("//div[@id='ProductDetails']/ancestor::html") {
+				log("------------------ I've mapped product ---------------")
+				# add_class("mw_testing")
+				@import pages/headphones.ts
+			}
       with(/^\/$|^\/\?/) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
@@ -28,16 +33,19 @@ match($status) {
 			with(/checkout/) {
 				@import pages/checkout.ts
 			}
-			with(/headphones/) {
-				@import pages/headphones.ts
-			}
-			with(/shop-iphone/) {
+			# with(/headphones/) {
+			# 	@import pages/headphones.ts
+			# }
+			with(/shop-/) {
 				@import pages/iphone.ts
 			}
       else() {
         log("--> No page match in mappings.ts")
       }
     }
+
+
+		
   }
 
   else() {
