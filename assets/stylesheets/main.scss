@@ -16,3 +16,6 @@
 @import "pages/_cart";
 @import "pages/_checkout";
 
+@media all and (min-width: 479px) {
+	@import "globals/_landscape.scss";
+}

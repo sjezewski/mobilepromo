@@ -1,7 +1,15 @@
 $("./body") {
 	add_class("mw_headphones")
-	
+
 	$("./div[@id='Container']") {
+		
+		$("./div[@id='AjaxLoading']") {
+			$("./img") {
+				# Replace Loading image
+				attribute("src", asset("images/ajax-loader.gif"))
+			}
+		}
+		
 		$("./div[@id='Outer']") {
 			$("./div[@id='Wrapper']") {
 				$("./div[@class='Content']") {
@@ -24,6 +32,17 @@ $("./body") {
 											}
 										}
 									}
+								}
+							}
+						}
+					}
+					
+					$("./div[@id='ProductDescription']") {
+						$("./div") {
+							$("./p") {
+								$("./br") {
+									# Remove all <br> tags from product description
+									remove()
 								}
 							}
 						}

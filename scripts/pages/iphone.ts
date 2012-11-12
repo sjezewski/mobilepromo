@@ -2,6 +2,7 @@ $("./body") {
 	add_class("mw_iphone")
 	
 	$("./div[@id='Container']") {
+				
  		$("./div[@id='Outer']") {
 			$("./div[@id='Wrapper']") {
 				

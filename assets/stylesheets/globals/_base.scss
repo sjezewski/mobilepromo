@@ -33,20 +33,34 @@ p{
 		margin-bottom: 5px;
 	}
 }
+textarea, input[type="text"], input[type="password"], select {
+	border: 1px solid #CDCDCD;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 3px;
+	-webkit-box-shadow: 0px 0px 0px #000;
+	   -moz-box-shadow: 0px 0px 0px #000;
+	        box-shadow: 0px 0px 0px #000;
+	
+}
+
 #AjaxLoading {
 	display: none;
 	text-align: center;
 	background: #FCF5AA;
 	width: 300px;
 	z-index: 999 !important;
-	padding: 22px 10px;
+	padding: 130px 10px;
 	left: 0 !important;
+	border-bottom: 2px solid #6a1800;
+	height: 250px;
+	font-size: 15px;
+	font-weight: bold;
 	img {
 		vertical-align: bottom;
 		display: block;
 		margin: 10px auto;
 	}
-
 }
 a{
 	text-decoration: none;
@@ -63,13 +77,21 @@ ul{
 		padding: 0;
 	}
 }
+hr {
+	margin: 10px 0;
+	padding: 0;
+	background: #C7D7DB;
+	height: 1px;
+	border: 0;
+}
+
 .Left{
 	padding: 10px;
 }
 .Right{
 	display: none;
 }
-.QuickViewBtn, .BrandList, .NewsletterSubscription, .CompareButton, .FeedLink, #CategoryBreadcrumb,  .Breadcrumb{
+.QuickViewBtn, .BrandList, .NewsletterSubscription, .CompareButton, .FeedLink, #CategoryBreadcrumb,  .Breadcrumb, .AddThisButtonBox{
 	display: none !important;
 }
 .Block{
@@ -79,7 +101,6 @@ ul{
 [mw_class='hide']{
 	display: none;
 }
-
 
 
 
@@ -95,9 +116,10 @@ ul{
 		height: auto !important;
 		padding: 8px;
 		margin-bottom: 10px;
+		position: relative;
 		@include clearfix();
 		.ProductDetails{
-			margin-bottom: 10px;
+			margin-bottom: 5px;
 			height: auto !important;
 		}
 		.ProductImage{
@@ -109,6 +131,10 @@ ul{
 				display: table-cell;
 				vertical-align: middle;
 				height: 120px;
+				img{
+					max-width: 120px;
+					max-height: 120px;
+				}
 			}
 		}
 		.ProductPriceRating{
@@ -124,13 +150,14 @@ ul{
 			color: #797979;
 		}
 		.ProductActionAdd{
+			position: absolute;
 			background-color: #6a1802;
 			border: 1px solid #661200;
 			text-align: center;
 			@include border-radius(6px);
-			margin-left: 130px;
+			left: 140px;
+			bottom: 10px;
 			width: 105px;
-			margin-top: 20px;
 			a{
 				color: #fff;
 				font-size: 11px;
@@ -189,6 +216,7 @@ ul{
 #ModalContentContainer {
 	-webkit-background-clip: padding-box;
 	margin-top: 49px;
+	border-bottom: 2px solid #6a1802;
 }
 
 #ModalTitle, .ModalTitle {
@@ -294,7 +322,7 @@ ul{
 	.fastCartSummaryBox{
 		clear: both;
 		margin-top: 15px;
-		padding: 20px 10px 10px;
+		padding: 20px 10px 20px;
 		text-align: center;
 	}
 }
@@ -302,7 +330,7 @@ ul{
 	margin-top: 5px;
 	a{
 		display: block;
-		background-color: #4a0b00;
+		background-color: #6a1802;
 		color: #fff !important;
 		width: 130px;
 		@include border-radius(10px);

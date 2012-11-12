@@ -1,4 +1,23 @@
 # The main file executed by Tritium. The start of all other files.
+match($method) {
+
+	with(/POST/) {
+	log("---------------------> Has a post <-----------------------")
+
+		match($path) {
+			with(/cart\.php/) {
+				log("---------------------> Processing cart.php <-----------------------")
+				
+				# Modify links that are imported with AJAX to point to mobile version of website
+				replace('www.igadgetcommerce', 'mlocal.igadgetcommerce')
+				
+			}
+		}
+		
+	}
+	
+}
+
 
 match($content_type) {
   with(/html/) {

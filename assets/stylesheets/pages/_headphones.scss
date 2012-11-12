@@ -41,42 +41,47 @@
 				}
 			}
 		}
-		.ProductDetailsGrid .DetailRow {
-			clear: left;
-			margin-top: 6px;
-			padding-left: 140px;
-		}
-		.ProductDetailsGrid .Label {
-			margin: 0 0 6px -140px;
-			float: left;
-			width: 130px;
-			font-weight: bold;
-			padding-top: 1px;
-			display: inline;
-			position: relative;
-			text-align: right;
-		}
-		.ProductDetailsGrid .Value {
-			display: inline;
-		}
-		.ProductDetailsGrid .Label .Required {
-			position: absolute;
-			left: -1em;
-		}
-		.ProductOptionList ul, .ProductOptionList li {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-		.ProductOptionList li {
-			margin-bottom: 3px;
-		}
-		.ProductOptionList input {
-			vertical-align: middle;
-		}	
+		.ProductMain{
+			padding: 15px 5px 0px;
+			background-color: #F1F1F1;
+			border: 1px solid #CCC;
+			.ProductDetailsGrid .DetailRow {
+				clear: left;
+				margin-top: 6px;
+				padding-left: 90px;
+			}
+			.ProductDetailsGrid .Label {
+				margin: 0 10px 6px -90px;
+				float: left;
+				width: 90px;
+				font-weight: bold;
+				padding-top: 1px;
+				display: inline;
+				position: relative;
+				text-align: right;
+			}
+			.ProductDetailsGrid .Value {
+				display: inline;
+			}
+			.ProductDetailsGrid .Label .Required {
+				position: absolute;
+				left: -1em;
+			}
+			.ProductOptionList ul, .ProductOptionList li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.ProductOptionList li {
+				margin-bottom: 3px;
+			}
+			.ProductOptionList input {
+				vertical-align: middle;
+			}
+		}		
 	}
 	.BulkDiscount{
-		margin: 15px 0px 25px -54px;
+		margin: 20px 0px 20px -10px;
 	}
 	
 	.Content{
@@ -91,7 +96,9 @@
 			ul{
 				margin: 0px;
 				background-color: #E5F8FF;
-				padding: 5px;
+				padding: 7px 10px;
+				border: 1px solid #CCEBF7;
+				margin-bottom: 5px;
 				li{
 					list-style: none;
 					background: image-url("breadcrumb.png") no-repeat left center;
@@ -106,6 +113,18 @@
 				}
 			}
 		}		
+		.ProductDescription{
+			.ProductDescriptionContainer{
+				> p{
+					span{
+						font-size: 14px;
+						margin-bottom: 5px;
+						margin-top: 20px;
+						display: block;
+					}
+				}
+			}
+		}
 		#ProductReviews{
 			.BlockContent{
 				form{
@@ -166,5 +185,7 @@
 			}
 		}
 	}
-	
+	#fancy_outer{
+		display: none;
+	}
 }

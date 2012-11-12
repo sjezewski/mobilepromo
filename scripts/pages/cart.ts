@@ -9,8 +9,10 @@ $("./body") {
 						$("./div[@class='BlockContent']") {
 							$("./div") {
 								
+								# Move right column in middle area under product table
 								move_here("../../../../div[@class='Right']/div", "bottom")
 								
+								# Move checkout buttons under Coupon/Certificate widget
 								$("./div[@class='ProceedToCheckout']") {
 									move_to("..", "bottom")
 								}
@@ -34,8 +36,7 @@ $("./body") {
 										}
 										
 										$("./div[@class=' mw_was_tbody']") {
-											$("./div") {
-												
+											$("./div") {											
 												$("./div[contains(@class, 'CartItemIndividualPrice')]") {
 													
 													# Wrap text children into <span> tag

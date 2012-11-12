@@ -1,0 +1,92 @@
+/*** Base ***/
+html,body { -webkit-text-size-adjust:none; }
+#Container {
+	width: 480px;
+	zoom: 1;
+}
+#Footer {
+	width: 460px;
+	background: url("http://localhost:3003/images/footer_bg.jpg") repeat-x 0 0;
+}
+
+.ProductList{
+	margin-bottom: 5px;
+	li {
+		width: 122px !important;
+		height: 228px !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 5px 5px;
+		.ProductImage{
+			float: none;
+		}
+		.ProductActionAdd {
+			position: static;
+			display: block;
+			margin-top: 5px;
+			width: 100px;
+			height: auto;
+			text-align: center;
+			padding: 0;
+			font-size: .95em;
+			a{
+				padding: 4px;
+			}
+		}
+		.ProductDetails{
+			height: 40px !important;
+			a{
+				font-size: 12px;
+				font-weight: normal;
+			}
+		}
+		.ProductImage {
+			margin: 0 0 5px 0;
+		}
+	}
+} 
+
+/*** iPhone ***/
+.mw_iphone .Left .ShopByPrice h2{
+	font-size: 15px;
+}
+.mw_iphone .SortBox{
+	font-size: 15px;
+}
+.mw_iphone .SubCategoryList{
+	a{
+		font-size: 13px;
+	}
+}
+
+/*** HeadPhones ***/
+.mw_headphones #ProductDetails .ProductMain {
+	width: 240px;
+	float: right;
+}
+.mw_headphones #ProductDetails .ProductThumb {
+	width: 190px !important;
+	height: auto !important;
+	overflow: hidden;
+	float: left;
+}
+.mw_headphones #ProductDetails .ProductThumb .ProductThumbImage {
+	width: 190px !important;
+	height: 190px !important;
+	zoom: 1;
+	img{
+		width: 190px;
+		height: auto;
+	}
+}
+.mw_headphones .BlockContent{
+	@include clearfix();
+	h2{
+		margin-bottom: 20px;
+	}
+	margin-bottom: 20px;
+	hr{
+		display: none;
+	}
+	
+} 
