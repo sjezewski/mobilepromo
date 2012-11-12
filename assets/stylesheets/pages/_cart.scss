@@ -150,15 +150,17 @@
 		}
 	}
 	.KeepShopping{
-		float: left;
-		margin-top: 45px;
-		margin-bottom: 5px;
+		background: image-url("header_bg.jpg") repeat-x 0 0;
+		padding: 9px 15px 5px;
+		margin: 45px -10px -20px;
+		border-bottom: 1px solid black;
 		a{
 			background: image-url("back.png") no-repeat 0 0;
 			padding: 10px 5px 10px 50px;
-			color: #6a1800;
+			color: #3A0D00;
 			font-weight: bold;
 			font-size: 12px;
+			display: block;
 		}
 	}
 }

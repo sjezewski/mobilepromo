@@ -13,7 +13,7 @@ html,body { -webkit-text-size-adjust:none; }
 	margin-bottom: 5px;
 	li {
 		width: 122px !important;
-		height: 228px !important;
+		height: 230px !important;
 		display: inline-block;
 		vertical-align: top;
 		margin: 5px 5px;
@@ -23,7 +23,7 @@ html,body { -webkit-text-size-adjust:none; }
 		.ProductActionAdd {
 			position: static;
 			display: block;
-			margin-top: 5px;
+			margin-top: 8px;
 			width: 100px;
 			height: auto;
 			text-align: center;
@@ -58,6 +58,10 @@ html,body { -webkit-text-size-adjust:none; }
 		font-size: 13px;
 	}
 }
+.mw_iphone .Left .ShopByPrice div ul li a {
+	background: url("http://localhost:3003/images/menu_go.png") no-repeat 93% center;
+}
+
 
 /*** HeadPhones ***/
 .mw_headphones #ProductDetails .ProductMain {
@@ -90,3 +94,59 @@ html,body { -webkit-text-size-adjust:none; }
 	}
 	
 } 
+.mw_headphones .Content #ProductReviews .BlockContent form {
+border: 1px solid lightGrey;
+width: 460px;
+}
+#AjaxLoading {
+	width: 480px;
+	padding: 90px 10px;
+	height: 250px;
+}
+#ModalContainer {
+	width: 480px !important;
+	background: url("http://localhost:3003/images/header_bg.jpg") repeat-x 0 0;
+	.ProductList{
+		li:last-child{
+			display: none;
+		}
+	}
+}
+
+/*** Cart ***/
+.mw_cart #cartForm #mw_items .mw_was_tbody > div{
+	min-height: 110px;
+	position: relative;
+	.ProductName {
+		width: 320px;
+	}	
+	.CartItemQuantity {
+		text-align: left;
+		display: inline-block;
+		float: left;
+		position: absolute;
+		top: 60px;
+		left: 125px;
+	}
+	.CartItemIndividualPrice {
+		text-align: right;
+		margin-top: -40px;
+	}
+} 
+.mw_headphones .Content #ProductReviews .BlockContent form .recaptchatable .recaptcha_image_cell center img {
+	width: auto !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_image {
+	width: 300px !important;
+	height: 57 !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form .recaptcha_image_cell {
+	width: auto !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_widget_div #recaptcha_table td:first-child {
+	display: inline-block;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_table {
+	width: auto !important;
+	background-color: white;
+}

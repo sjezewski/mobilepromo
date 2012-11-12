@@ -130,7 +130,8 @@
 				form{
 					background-color: #F1F1F1;
 					padding: 10px;
-					border: 1px solid #D3D3D3;
+					border-top: 1px solid #D3D3D3;
+					border-bottom: 1px solid #D3D3D3;
 					width: 300px;
 					overflow: hidden;
 					margin-bottom: 15px;
@@ -186,6 +187,6 @@
 		}
 	}
 	#fancy_outer{
-		display: none;
+		display: none !important;
 	}
 }
