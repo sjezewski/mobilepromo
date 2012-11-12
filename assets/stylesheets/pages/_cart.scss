@@ -38,6 +38,7 @@
 						font-size: 14px;
 						text-decoration: underline;
 						line-height: 140%;
+						font-weight: bold;
 					}
 					.CartItemQuantity{
 						text-align: left;
@@ -139,14 +140,11 @@
 		text-align: center;
 		a {
 			display: inline-block;
-			background-color: #6a1800;
-			color: white !important;
-			width: 200px;
-			@include border-radius(6px);
-			font-size: 12px;
-			padding: 5px 4px 4px;
-			text-align: center;
-			text-shadow: 1px 1px 0px #222;
+			width: 213px;
+			height: 30px;
+			text-align: left;
+			text-indent: -9999px;
+			background: image-url("MultippleAddresses.png") no-repeat 0 0;
 		}
 	}
 	.KeepShopping{

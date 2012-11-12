@@ -10,7 +10,7 @@ match($method) {
 				
 				# Modify links that are imported with AJAX to point to mobile version of website
 				replace('www.igadgetcommerce', 'mlocal.igadgetcommerce')
-				
+				replace('\/red\/CheckoutButton\.gif', 'brake_img')
 			}
 		}
 		

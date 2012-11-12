@@ -25,7 +25,7 @@ $('./body') {
 					insert_bottom("div", class: "mw_mobile_menu"){						
 						
 						# Insert container element for menu button
-						insert("div", class: "mw_menu_btn"){
+						insert_bottom("div", class: "mw_menu_btn"){
 							
 							# Declare toggler button which enable/disable toggler content
 							attribute("data-ur-toggler-component", "button")
@@ -36,7 +36,7 @@ $('./body') {
 						}
 						
 						# Insert container element for search form
-						insert("div", class: "mw_search"){
+						insert_top("div", class: "mw_search"){
 							
 							# Move search form into container element
 							move_here("../../../div[@id='SearchForm']", "bottom"){
@@ -53,6 +53,10 @@ $('./body') {
 									# Change search button background image
 									$("./input[@type='image']") {
 										attribute("src", asset("images/search.png"))
+									}
+									
+									$("./input[@type='text']") {
+										attribute("placeholder", "Search…")
 									}
 									
 								}

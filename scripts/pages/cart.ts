@@ -61,7 +61,49 @@ $("./body") {
 										
 									}									
 
+									$("./div[@class='FloatLeft']") {
+										$("./input") {
+											# Change background image of "Update Quanity" button
+											attribute("src", asset("images/UpdateQuanity.png"))
+										}
+									}									
+
 								}
+								
+								$("./div[@class='ProceedToCheckout']") {
+									$("./div[@class='CheckoutButton']") {
+										$("./a") {
+											$("./img") {
+												# Change background image of "Proceed To Checkout" button
+												attribute("src", asset("images/ProceedToCheckout.png"))
+											}
+										}
+									}
+								}
+								
+								$("./div[@id='SideCouponCodeBox']") {
+									$("./div[@class='BlockContent']") {
+										$("./form") {
+											$("./div") {
+												$("./input[@type='image']") {
+													attribute("src", asset("images/go_btn.png"))
+												}
+											}
+										}
+									}
+								}
+								$("./div[@id='SideGiftCertificateCodeBox']") {
+									$("./div[@class='BlockContent']") {
+										$("./form") {
+											$("./div") {
+												$("./input[@type='image']") {
+													attribute("src", asset("images/go_btn.png"))
+												}
+											}
+										}
+									}
+								}
+								
 							}
 						}
 					}

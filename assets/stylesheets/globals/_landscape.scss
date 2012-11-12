@@ -16,7 +16,7 @@ html,body { -webkit-text-size-adjust:none; }
 		height: 230px !important;
 		display: inline-block;
 		vertical-align: top;
-		margin: 5px 5px;
+		margin: 6px 5px;
 		.ProductImage{
 			float: none;
 		}
@@ -30,14 +30,16 @@ html,body { -webkit-text-size-adjust:none; }
 			padding: 0;
 			font-size: .95em;
 			a{
-				padding: 4px;
+				padding: 6px;
 			}
 		}
 		.ProductDetails{
-			height: 40px !important;
+			height: 55px !important;
+			margin-bottom: 0;
 			a{
-				font-size: 12px;
-				font-weight: normal;
+				font-size: 13px;
+				font-weight: bold;
+				line-height: 130%;
 			}
 		}
 		.ProductImage {
@@ -111,6 +113,9 @@ width: 460px;
 			display: none;
 		}
 	}
+}
+.mw_headphones .BulkDiscount {
+	margin: 20px 0px 20px -30px;
 }
 
 /*** Cart ***/

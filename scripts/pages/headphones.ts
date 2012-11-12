@@ -17,6 +17,7 @@ $("./body") {
 					$("./div[@id='ProductDetails']") {
 						$("./div[@class='BlockContent']") {
 							$("./div[@class='ProductMain']") {
+								
 								$("./div[@class='productAddToCartRight']") {
 									$("./form") {
 										$("./div[@class='ProductDetailsGrid ProductAddToCart']") {
@@ -33,6 +34,18 @@ $("./body") {
 										}
 									}
 								}
+								
+								$("./div[@class='ProductDetailsGrid']") {
+									$("./div") {
+										$("./div[@class='Value']") {
+											$("./img/../span") {
+												# Remove vote count
+												remove()
+											}
+										}
+									}
+								}
+								
 							}
 						}
 					}
