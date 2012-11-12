@@ -19,5 +19,9 @@ $("/html") {
   @import sections/footer.ts
 
   @import mappings.ts
+$(".//div[@class='ProductActionAdd']"){
+	remove()
 }
+}
+
 
