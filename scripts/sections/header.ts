@@ -63,7 +63,7 @@ $('./body') {
 						}						
 					}
 					insert("div", class: "mw_banner"){
-					# move promo banner here
+  					# move promo banner here
 						move_here("//div[@id='mobile_banner']", "bottom"){
 						attribute("style", "")
 						}
