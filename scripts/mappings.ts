@@ -39,6 +39,9 @@ match($status) {
 			with(/shop-/) {
 				@import pages/iphone.ts
 			}
+			with(/holiday-landing-page/) {
+				@import pages/landing.ts
+			}
       else() {
         log("--> No page match in mappings.ts")
       }
