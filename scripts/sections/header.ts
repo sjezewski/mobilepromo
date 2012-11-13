@@ -57,12 +57,17 @@ $('./body') {
 									
 									$("./input[@type='text']") {
 										attribute("placeholder", "Search…")
-									}
-									
-								}
+									}	
+								}			
 							}
 						}						
-					}				
+					}
+/*					insert("div", class: "mw_banner"){
+					# move promo banner here
+						move_here("//div[@id='mobile_banner']", "bottom"){
+						attribute("style", "")
+						}
+					}	*/			
 					
  				}												
 
