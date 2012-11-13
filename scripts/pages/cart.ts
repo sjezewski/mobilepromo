@@ -20,6 +20,13 @@ $("./body") {
 
 					$("./div[@id='CartContent']") {
 						$("./div[@class='BlockContent']") {
+						  $("./div[@class='KeepShopping FloatRight']") {
+						    %content = fetch("a/text()")
+						    match(%content, "") {
+						      attribute("mw_class", "hide")
+						    }
+						  }
+						  
 							$("./div") {
 								
 								# Move right column in middle area under product table
