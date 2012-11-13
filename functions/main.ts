@@ -2,6 +2,10 @@
 ### Site Functions
 ####################
 
+@func XMLNode.insert_coupon_applier(Text %javascript_path) {
+  insert("script", data-keep: "true", type: "text/javascript", src: asset(%javascript_path))
+}
+
 # BTN DELEGATE
 # 
 # EXAMPLE CSS

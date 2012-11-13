@@ -1,3 +1,6 @@
+$("./head") {
+  insert_coupon_applier("javascript/cart.js")
+}
 $("./body") {
 	add_class("mw_cart")
 	
@@ -20,6 +23,15 @@ $("./body") {
 
 					$("./div[@id='CartContent']") {
 						$("./div[@class='BlockContent']") {
+						  
+						  # When the cart is empty, this empty tag is appearing incorrectly due to CSS
+						  $("./div[@class='KeepShopping FloatRight']") {
+						    %content = fetch("a/text()")
+						    match(%content, "") {
+						      attribute("mw_class", "hide")
+						    }
+						  }
+						  
 							$("./div") {
 								
 								# Move right column in middle area under product table
@@ -49,6 +61,7 @@ $("./body") {
 										}
 										
 										$("./div[@class=' mw_was_tbody']") {
+										  attribute("id", "mw_cart_items")
 											$("./div") {											
 												$("./div[contains(@class, 'CartItemIndividualPrice')]") {
 													
