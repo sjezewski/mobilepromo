@@ -1,127 +1,44 @@
-$("./body") {
-	add_class("mw_cart")
-	
-	$("./div[@id='Container']") {
-		$("./div[@id='Outer']") {
-			$("./div[@id='Wrapper']") {
-				$("./div[@class='Content']") {
+$(".//div[@id='Container']") {
+	add_class("mw_holiday_laninding_page" )
 
-					$("./div[@id='CartHeader']") {
-						$("./h2") {
-							$("./span") {
-								$("./a") {
-									$("./img") {
-										attribute("src", asset("images/ProceedToCheckout.png"))
-									}
-								}
-							}
-						}
-					}
 
-					$("./div[@id='CartContent']") {
-						$("./div[@class='BlockContent']") {
-							$("./div") {
-								
-								# Move right column in middle area under product table
-								move_here("../../../../div[@class='Right']/div", "bottom")
-								
-								# Move checkout buttons under Coupon/Certificate widget
-								$("./div[@class='ProceedToCheckout']") {
-									move_to("..", "bottom")
-								}
-								
-								$("./form") {
-									
-									# Transform <table> elements into <div> elements
-									table_dump("./table"){
-										
-										# Add ID attribute
-										attribute("id", "mw_items")
-										
-										# Remove table header
-										$("./div[1]") {
-											remove()
-										}
-										
-										$("./div[@class=' mw_was_tfoot']") {
-											# Move total prices under product details
-											move_to("..", "bottom")
-										}
-										
-										$("./div[@class=' mw_was_tbody']") {
-											$("./div") {											
-												$("./div[contains(@class, 'CartItemIndividualPrice')]") {
-													
-													# Wrap text children into <span> tag
-													wrap_text_children("span", class: "mw_item_price")
-													
-													# Insert <span> tag with "Item Price" text inside
-													insert_top("span", class: "mw_item_label", "Item Price:")
-												}
-												
-												$("./div[contains(@class, 'CartItemTotalPrice')]") {
-													
-													# Wrap text children into <span> tag
-													wrap_text_children("span", class: "mw_total_price")
-													
-													# Insert <span> tag with "Item Total" text inside
-													insert_top("span", class: "mw_total_label", "Item Total: ")
-													
-												}
-												
-											}
-										}
-										
-									}									
+	$(".//div[@id='Wrapper']") {
+		# cleaning up
+		remove("./div[@id='LayoutColumn1']");
+		$("./div[@id='LayoutColumn2']") {
+			attribute("class", "mw_inner_container")
+		}
 
-									$("./div[@class='FloatLeft']") {
-										$("./input") {
-											# Change background image of "Update Quanity" button
-											attribute("src", asset("images/UpdateQuanity.png"))
-										}
-									}									
+		# passbook button
+		$(".//a[@type='application/vnd.apple.pkpass']") {
+			add_class("mw_passbook_link mw_promo_grad1")
+			move_to("..", "before")
+		}
 
-								}
-								
-								$("./div[@class='ProceedToCheckout']") {
-									$("./div[@class='CheckoutButton']") {
-										$("./a") {
-											$("./img") {
-												# Change background image of "Proceed To Checkout" button
-												attribute("src", asset("images/ProceedToCheckout.png"))
-											}
-										}
-									}
-								}
-								
-								$("./div[@id='SideCouponCodeBox']") {
-									$("./div[@class='BlockContent']") {
-										$("./form") {
-											$("./div") {
-												$("./input[@type='image']") {
-													attribute("src", asset("images/go_btn.png"))
-												}
-											}
-										}
-									}
-								}
-								$("./div[@id='SideGiftCertificateCodeBox']") {
-									$("./div[@class='BlockContent']") {
-										$("./form") {
-											$("./div") {
-												$("./input[@type='image']") {
-													attribute("src", asset("images/go_btn.png"))
-												}
-											}
-										}
-									}
-								}
-								
-							}
-						}
-					}
-				}
+		# products
+		$(".//img[contains(@class,'mce_add_custom')]/..") {
+			wrap("div", class:"mw_product") {
+				move_to("../..", "top")
 			}
 		}
+		$(".//div[@class='BlockContent']") {
+			insert_top("div", class:"mw_product_container") {
+				move_here("../div[contains(@class,'mw_product')]")
+			}
+		}
+
+
+		#social
+		$(".//a[contains(@class, 'twitter-share')]") {
+
+			add_class("mw_twitter mw_social")
+			wrap("div", class:"mw_social_conainter") {
+				insert_top("a", href:"#", class:"mw_fb mw_social", "facebook")
+				insert_top("a", href:"#", class:"mw_gp mw_social", "googleplus")				
+			}
+
+
+		}
+		
 	}
 }

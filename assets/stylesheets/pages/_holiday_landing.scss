@@ -1,0 +1,84 @@
+.mw_holiday_laninding_page {
+
+  .mw_inner_container {
+    padding: 10px;
+  }
+
+  .mw_passbook_link {
+    display: block;
+    text-align: center;
+    @include box-shadow(0 1px 1px rgba(0,0,0,0.6));
+  }
+  .mw_product_container {
+    overflow: hidden;
+    display: block;
+
+    @include display-box;
+    @include box-align(start);
+    @include box-orient(horizontal);
+    @include box-pack(start);
+
+  }
+  .mw_product {
+    @include box-flex(2);
+    width: 120px;
+    border: 1px solid #ddd;
+    height: 120px;
+    padding: 10px;
+    margin: 10px;
+    // float: left;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .mw_social_conainter {
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .mw_twitter {
+    background: image-url("twitter.png") no-repeat 95% center;  
+  }
+  .mw_fb {
+    background: image-url("facebook.jpeg") no-repeat 95% center;
+  }
+  .mw_gp {
+    background: image-url("gplus.png") no-repeat 95% center;
+  }
+  .mw_social {
+    background-size: 100%;
+    text-indent: -9999px;
+    color: transparent;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    @include border-radius(5px);
+    @include box-shadow(0 1px 1px rgba(0,0,0,0.6));
+  }
+
+  br {
+    display: none;
+  }
+
+  .main_message {
+    br {
+      display: block;
+    }
+    .main_paragraph {
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+      display: block;
+      @extend .mw_promo_grad2;
+      & > span {
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
