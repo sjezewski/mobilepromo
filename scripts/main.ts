@@ -9,7 +9,8 @@ match($method) {
 				log("---------------------> Processing cart.php <-----------------------")
 				
 				# Modify links that are imported with AJAX to point to mobile version of website
-				replace('www.igadgetcommerce', 'mlocal.igadgetcommerce')			
+				log($host)
+				replace('www.igadgetcommerce.com', $host)
 			}
 		}
 		
