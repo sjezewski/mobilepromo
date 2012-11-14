@@ -5,7 +5,14 @@
 @func XMLNode.insert_coupon_applier(Text %javascript_path) {
   insert("script", data-keep: "true", type: "text/javascript", src: asset(%javascript_path))
 }
-
+@func XMLNode.insert_bigcommerce_banner() {
+	insert("div", class: "mw_banner"){
+	# move promo banner here
+		move_here("//div[@id='mobile_banner']", "bottom"){
+		attribute("style", "")
+		}
+	}
+}
 # BTN DELEGATE
 # 
 # EXAMPLE CSS
