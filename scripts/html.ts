@@ -1,5 +1,5 @@
 # HTML Transformations go here
-
+/*
 $("/html") {
   rewrite_links()
   absolutize_srcs()
@@ -25,3 +25,4 @@ $(".//div[@class='ProductActionAdd']"){
 }
 
 
+*/
