@@ -62,7 +62,7 @@ $('./body') {
 							}
 						}						
           }			
-						#insert_bigcommerce_banner()
+						insert_bigcommerce_banner()
         }												
 
 				# Remove br tag
