@@ -1,5 +1,5 @@
 $("./head") {
-  insert_coupon_applier("javascript/cart.js")
+  # insert_coupon_applier("javascript/cart.js")
 }
 $("./body") {
 	add_class("mw_cart")
