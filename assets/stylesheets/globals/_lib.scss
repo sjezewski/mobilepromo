@@ -1,0 +1,36 @@
+// Christmas
+
+/*
+$color1: #AC120D;
+$color3: #306F1C;
+$colorf: white;
+
+*/
+// Thanksgiving
+
+$color1: #6A2F0D;
+$color3: #FF8C2F;
+$colorf: white;
+
+@mixin grad_base {
+  padding: 10px;
+  font-weight: bold;
+  color: $colorf;
+  text-shadow: 0 -1px rgba(0,0,0,0.9);
+}
+
+.mw_promo_grad1 {
+  @include grad_base();
+  @include background-image(linear-gradient($color1 0, shade($color1, 40%) 100%));
+  @include border-radius(5px);
+  border: 1px solid shade($color1, 60%);
+}
+
+
+.mw_promo_grad2 {
+  @include grad_base();
+  @include background-image(linear-gradient($color3 0, shade($color3, 40%) 100%));
+  @include border-radius(5px);
+  border: 1px solid shade($color3, 50%);
+}
+

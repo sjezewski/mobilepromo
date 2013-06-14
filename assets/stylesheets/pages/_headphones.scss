@@ -1,0 +1,267 @@
+.mw_headphones{
+	.Left{
+		display: none;
+	}
+	#ProductDetails {
+		#ImageScrollNext, #ImageScrollPrev {
+			float: left;
+			background: none;
+			border: none;
+			margin-top: 16px;
+			cursor: pointer;
+			display: none;
+		}
+		.ProductThumb{
+			width: 300px !important;
+			height: auto !important;
+			.ProductThumbImage{
+				width: 300px !important;
+				@include clearfix();
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.zoomPad{
+				text-align: center;
+				> div{
+					display: none !important;
+				}
+			}
+			.ImageCarouselBox{
+				padding: 0px 0px 10px !important;
+				text-align: center;
+				> div{
+					display: inline-block;
+					width: 150px !important;
+					ul{
+						width: 150px !important;
+						li{
+							margin: 5px;	
+							display: inline-block !important;
+							float: none !important;						
+						}
+					}
+				}
+			}
+		}
+		.ProductMain{
+			padding: 15px 5px 0px;
+			background-color: #F1F1F1;
+			border: 1px solid #CCC;
+			ul{
+				li{
+					list-style: none;
+					margin-bottom: 10px;
+				}
+			}
+			.scrollContainer{
+				.hasPreview{
+					display: none;
+				}
+				.none.selectedValue{
+					.image{
+						display: none;
+					}
+				}
+				> table{
+					> tbody{
+						> tr{
+							display: block;
+							margin-bottom: 7px;
+						}
+					}
+				}
+			}			
+			.ProductDetailsGrid .DetailRow {
+				clear: left;
+				margin-top: 10px;
+				padding-left: 90px;
+				.Label {
+					margin: 0 10px 6px -90px;
+					float: left;
+					width: 90px;
+					font-weight: bold;
+					padding-top: 1px;
+					display: inline;
+					position: relative;
+					text-align: right;
+				}
+				.Value {
+					display: inline;
+				}
+				.Label .Required {
+					position: absolute;
+					left: -1em;
+				}
+			}
+
+			.ProductOptionList ul, .ProductOptionList li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.ProductOptionList li {
+				margin-bottom: 3px;
+			}
+			.ProductOptionList input {
+				vertical-align: middle;
+			}
+			
+			.productAttributeList .productAttributeRow {
+				clear: left;
+				margin-top: 25px;
+				padding-left: 90px;
+			}
+			.productAttributeLabel {
+				text-align: right;
+				font-weight: bold;
+				margin: 0 0 6px -100px;
+				float: left;
+				width: 90px;
+				font-weight: bold;
+				padding-top: 1px;
+				display: inline;
+				.required {
+				color: red;
+				}
+			}
+
+		}		
+	}
+	.BulkDiscount{
+		margin: 20px 0px 20px -10px;
+	}
+	
+	.Content{
+		ul{
+			margin: 0 0 10px 25px;
+			li{
+				list-style-type: disc;
+				margin-bottom: 10px;
+			}
+		}
+		.FindByCategory{
+			ul{
+				margin: 0px;
+				background-color: #E5F8FF;
+				padding: 7px 10px;
+				border: 1px solid #CCEBF7;
+				margin-bottom: 5px;
+				li{
+					list-style: none;
+					background: image-url("breadcrumb.png") no-repeat left center;
+					padding-left: 15px;
+					display: inline-block;
+					margin: 0px;
+				}
+				li:first-child{
+					background: none;
+					padding-left: 0;
+					padding-right: 8px;
+				}
+			}
+		}		
+		.ProductDescription{
+			.ProductDescriptionContainer{
+				> p{
+					span{
+						font-size: 14px;
+						margin-bottom: 5px;
+						margin-top: 20px;
+						display: block;
+					}
+				}
+			}
+		}
+		#ProductReviews{
+			.BlockContent{
+				form{
+					background-color: #F1F1F1;
+					padding: 10px;
+					border-top: 1px solid #D3D3D3;
+					border-bottom: 1px solid #D3D3D3;
+					width: 300px;
+					overflow: hidden;
+					margin-bottom: 15px;
+					margin-left: -10px;
+					dd{
+						-webkit-margin-start: 15px;
+						margin-bottom: 20px;
+						margin-top: 3px;
+					}
+					#recaptcha_widget_div{
+						#recaptcha_table{
+							td{
+								display: inline-block;
+							}
+							td:first-child{
+								display: block;
+							}
+						}
+					}
+					#recaptcha_table{
+						width: 260px !important;
+						background-color: #fff;
+					}
+					#recaptcha_area{
+						overflow: hidden;
+					}
+					#recaptcha_image{
+						width: 260px !important;
+						height: auto !important;
+					}
+					.recaptcha_image_cell{
+						width: 260px !important;
+					}
+					.recaptchatable .recaptcha_image_cell{
+						center img {
+							width: 250px !important;
+						}
+					} 
+					input#recaptcha_response_field{
+						width: 258px !important;
+					}
+					p.Submit{
+						input{
+							background: image-url("SaveReview.png") no-repeat 0 0;
+							text-indent: -9999px;
+							width: 130px;
+							height: 30px;
+							border: 0px solid #000;
+						}
+					}
+				}
+			}
+		}
+	}
+	#SimilarProductsByCustomerViews{	
+		margin-top: 40px;	
+		.ProductList{
+			margin: 0;
+			li:nth-child(4){
+				display: none;
+			}
+		}
+	}
+	#fancy_outer{
+		display: none !important;
+	}
+	
+	.productAttributeConfigurablePickListSet ul, .productAttributeConfigurablePickListSet li, .productAttributeConfigurablePickListSwatch ul, .productAttributeConfigurablePickListSwatch li, .productAttributeConfigurablePickListProduct ul, .productAttributeConfigurablePickListProduct li {
+		margin-left: 0;
+		padding-left: 0;
+		list-style-type: none;
+	}
+	.productOptionViewProductPickList label, .productOptionViewRectangle label, .productOptionViewRadio label {
+		display: block;
+		padding-left: 18px;
+		min-height: 18px;
+	}
+	.productOptionViewProductPickList input, .productOptionViewRectangle input, .productOptionViewRadio input {
+		float: left;
+		width: 18px;
+		margin-left: -18px;
+		margin-top: 1px;		
+		position: relative;
+	}
+
+}

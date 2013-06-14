@@ -1,0 +1,157 @@
+/*** Base ***/
+html,body { -webkit-text-size-adjust:none; }
+#Container {
+	width: 480px;
+	zoom: 1;
+}
+#Footer {
+	width: 460px;
+	background: url("http://localhost:3003/images/footer_bg.jpg") repeat-x 0 0;
+}
+
+.ProductList{
+	margin-bottom: 5px;
+	li {
+		width: 122px !important;
+		height: 238px !important;
+		display: inline-block;
+		vertical-align: top;
+		margin: 6px 5px;
+		.ProductImage{
+			float: none;
+		}
+		.ProductActionAdd {
+			position: static;
+			display: block;
+			margin-top: 8px;
+			width: 100px;
+			height: auto;
+			text-align: center;
+			padding: 0;
+			font-size: .95em;
+			a{
+				padding: 6px;
+			}
+		}
+		.ProductDetails{
+			height: 50px !important;
+			margin-bottom: 0;
+			a{
+				font-size: 13px;
+				font-weight: bold;
+				line-height: 130%;
+			}
+		}
+		.ProductImage {
+			margin: 0 0 5px 0;
+		}
+	}
+} 
+
+/*** iPhone ***/
+.mw_iphone .Left .ShopByPrice h2{
+	font-size: 15px;
+}
+.mw_iphone .SortBox{
+	font-size: 15px;
+}
+.mw_iphone .SubCategoryList{
+	a{
+		font-size: 13px;
+	}
+}
+.mw_iphone .Left .ShopByPrice div ul li a {
+	background: url("http://localhost:3003/images/menu_go.png") no-repeat 93% center;
+}
+
+
+/*** HeadPhones ***/
+.mw_headphones #ProductDetails .ProductMain {
+	width: 240px;
+	float: right;
+}
+.mw_headphones #ProductDetails .ProductThumb {
+	width: 190px !important;
+	height: auto !important;
+	overflow: hidden;
+	float: left;
+}
+.mw_headphones #ProductDetails .ProductThumb .ProductThumbImage {
+	width: 190px !important;
+	height: 190px !important;
+	zoom: 1;
+	img{
+		width: 190px;
+		height: auto;
+	}
+}
+.mw_headphones .BlockContent{
+	@include clearfix();
+	h2{
+		margin-bottom: 20px;
+	}
+	margin-bottom: 20px;
+	hr{
+		display: none;
+	}
+	
+} 
+.mw_headphones .Content #ProductReviews .BlockContent form {
+border: 1px solid lightGrey;
+width: 460px;
+}
+#AjaxLoading {
+	width: 480px;
+	padding: 90px 10px;
+	height: 250px;
+}
+#ModalContainer {
+	width: 480px !important;
+	background: url("http://localhost:3003/images/header_bg.jpg") repeat-x 0 0;
+	.ProductList{
+		li:last-child{
+			display: none;
+		}
+	}
+}
+.mw_headphones .BulkDiscount {
+	margin: 20px 0px 20px -30px;
+}
+
+/*** Cart ***/
+.mw_cart #cartForm #mw_items .mw_was_tbody > div{
+	min-height: 110px;
+	position: relative;
+	.ProductName {
+		width: 320px;
+	}	
+	.CartItemQuantity {
+		text-align: left;
+		display: inline-block;
+		float: left;
+		position: absolute;
+		top: 60px;
+		left: 125px;
+	}
+	.CartItemIndividualPrice {
+		text-align: right;
+		margin-top: -40px;
+	}
+} 
+.mw_headphones .Content #ProductReviews .BlockContent form .recaptchatable .recaptcha_image_cell center img {
+	width: auto !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_image {
+	width: 300px !important;
+	height: 57 !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form .recaptcha_image_cell {
+	width: auto !important;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_widget_div #recaptcha_table td:first-child {
+	display: inline-block;
+}
+.mw_headphones .Content #ProductReviews .BlockContent form #recaptcha_table {
+	width: auto !important;
+	background-color: white;
+}

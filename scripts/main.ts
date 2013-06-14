@@ -1,4 +1,23 @@
 # The main file executed by Tritium. The start of all other files.
+match($method) {
+
+  with(/POST/) {
+    log("---------------------> Has a post <-----------------------")
+
+    match($path) {
+      with(/cart\.php/) {
+        log("---------------------> Processing cart.php <-----------------------")
+        
+        # Modify links that are imported with AJAX to point to mobile version of website
+        log($host)
+        replace('www.igadgetcommerce.com', $host)
+      }
+    }
+    
+  }
+	
+}
+
 
 match($content_type) {
   with(/html/) {
@@ -7,7 +26,6 @@ match($content_type) {
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
     # simply remove the "UTF-8" argument.  e.g. html(){ ... }
     html("UTF-8") {
-      @import device_detection.ts  
       
       @import html.ts
     }
@@ -20,4 +38,8 @@ match($content_type) {
   else() {
     log(concat("Passing through ", $content_type, " unmodified"))
   }
+}
+
+match($is_promo, "true") {
+  log("FUCKING PROMO")
 }

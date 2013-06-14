@@ -1,0 +1,371 @@
+.mw_checkout{
+
+	/*** Copy from original site ***/
+	.ExpressCheckoutBlock .ExpressCheckoutTitle {
+		position: relative;
+		padding: 6px;
+		margin-bottom: 10px;
+	}
+	.ExpressCheckoutBlock h3 a {
+		font-size: 12px;
+	}
+	.ExpressCheckoutBlock {
+		padding-top: 6px;
+	}
+	.ExpressCheckoutBlock .ExpressCheckoutCompletedContent {
+		display: none;
+	}
+	.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+		display: inline;
+		font-size: 12px;
+		font-weight: normal;
+		font-style: italic;
+	}
+	.ExpressCheckoutBlockCollapsed .ExpressCheckoutContent {
+		display: none;
+	}
+	a.ChangeLink {
+		position: absolute;
+		right: 15px;
+	}
+	.ExpressCheckoutBlock a.ChangeLink {
+		display: none;
+	}
+	.ExpressCheckoutBlockCompleted a.ChangeLink {
+		display: inline;
+	}
+	.ExpressCheckoutCompletedContent {
+		position: absolute;
+		left: 250px;
+	}
+	.LoadingIndicator {
+		margin-left: 10px;
+	}
+	.LoadingIndicator img {
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	#TopMenu li.HeaderLiveChat {
+		float: right;
+	}
+	#TopMenu li.HeaderLiveChat div {
+		border-left: 0;
+	}
+	.HeaderLiveChat img {
+		vertical-align: middle;
+	}
+	#ProductOtherDetails .ProductDetailsGrid {
+		margin-left: 25px;
+	}
+	.SubCategoryListGrid {
+		padding: 4px;
+	}
+	.SubCategoryListGrid ul, .SubCategoryListGrid li {
+		list-style: none;
+		margin-left: 0;
+	}
+	.SubCategoryListGrid li {
+		margin-bottom: 4px;
+		padding: 10px;
+		margin-left: 10px;
+		background: #fff;
+		float: left;
+		text-align: center;
+	}
+	.SubCategoryListGrid ol {
+		clear: both;
+	}
+	.SubBrandList {
+		padding: 4px;
+	}
+	.SubBrandList ul, .SubBrandList li {
+		list-style: none;
+		margin-left: 0;
+	}
+	.SubBrandList li {
+		margin-bottom: 4px;
+		padding-left: 25px;
+		background: url('../../SmartShop/images/SubBrand.gif') no-repeat 3px 1px;
+	}
+	.SubBrandListGrid {
+		padding: 4px;
+	}
+	.SubBrandListGrid ul, .SubBrandListGrid li {
+		list-style: none;
+		margin-left: 0;
+	}
+	.SubBrandListGrid li {
+		margin-bottom: 4px;
+		padding: 10px;
+		margin-left: 10px;
+		background: #fff;
+		float: left;
+		text-align: center;
+	}
+	.SubBrandListGrid ol {
+		clear: both;
+	}
+	.ProductAddToCart dt {
+		float: left;
+		font-weight: bold;
+		width: 140px;
+		margin-bottom: 4px;
+	}
+	.ProductAddToCart dt div.Required, #CartEditProductFieldsForm dt div.Required {
+		margin-left: -10px;
+	}
+	.ProductAddToCart dd {
+		margin-left: 140px;
+		margin-bottom: 4px;
+	}
+	.ProductAddToCart input.Textbox, #CartEditProductFieldsForm input.Textbox {
+		width:181px;
+	}
+	.ProductAddToCart textarea, #CartEditProductFieldsForm textarea {
+		width:183px;
+		height: 50px;
+	}
+	.ProductFields dd {
+		margin-bottom: 4px;
+		float:left;
+		margin-left:20px;
+	}
+	.ProductFields {
+		margin-bottom: 15px;
+	}
+	.ProductFields input.Textbox {
+		width:100%;
+	}
+	.ProductFields TextArea {
+		width:100%;
+	}
+	.CartContents .CartProductFieldsLink {
+		font-size: 11px;
+		color: #666;
+		margin-top: 6px;
+		padding-left: 22px;
+		background: url('../../SmartShop/images/GiftWrappingAvailable.gif') no-repeat;
+		padding-bottom: 4px;
+	}
+	.CartContents .CartProductFieldsRow {
+		border-top: 0;
+	}
+	.CartContents .CartProductFieldsRow dl {
+		margin-top:15px;
+	}
+	p.QuantityInput, p.AddCartButton {
+		text-align: center;
+	}
+	.ProductAddToCart dt.QuantityInput {
+		margin-top: 4px;
+	}
+	.ProductAddToCart dd.AddCartButton span {
+		margin-top: 4px;
+		padding-right: 5px;
+	}
+	.ProductActionAdd {
+		display: block;
+		margin-top: 5px;
+		width:100px;
+		height:18px;
+		text-align:center;
+		padding-top:2px;
+		font-size:.95em
+	}
+	.ProductActionAdd a, .ProductActionAdd strong a, .ProductActionAdd a:hover, .ProductActionAdd strong a:hover {
+		text-decoration: none;
+	}
+	.TagList {
+		margin-top: 20px;
+	}
+	.CartThumb {
+		text-align: center;
+		width: 1px;
+	}
+	.WrappingOptions {
+		font-size: 11px;
+		color: #666;
+		margin-top: 6px;
+		padding-left: 22px;
+		background: url('../../SmartShop/images/GiftWrappingAvailable.gif') no-repeat;
+		padding-bottom: 4px;
+		line-height: 1.6;
+	}
+	.ViewAllLink a {
+		padding-top: 10px;
+		display: block;
+	}
+	.SelectGiftWrapMultiple {
+		max-height: 400px;
+	}
+	.ExpressCheckoutBlock .ExpressCheckoutTitle {
+		background: #dce8f4;
+		border: 1px solid #c4d7eb;
+	}
+	.ExpressCheckoutBlockCollapsed .ExpressCheckoutTitle {
+		background: #f0f0f0;
+		border: 1px solid #ddd;
+		color: #555;
+	}
+	.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent {
+		color: #888;
+	}
+	
+	/*** Moovweb code ***/
+	.Clear{
+		display: block !important;
+	}
+	.CreateAccount{
+		border-bottom: 1px solid #CCC;
+		margin-bottom: 15px;
+	}
+	dd {
+		display: block;
+		-webkit-margin-start: 0px;
+	}
+	.Submit{
+		> a{
+			background-color: #E2E2E2;
+			border: 1px solid #A9A9A9;
+			color: #5D5D5D;
+			@include border-radius(4px);
+			padding: 4px 6px;
+			font-size: 12px;
+			margin: 0px;
+			display: inline-block;
+		}
+	}
+	
+	/*** iOS simulator code ***/
+	dl{
+		dt{
+			margin-top: 15px;
+		}
+		dd{
+			input, select{
+				margin: 3px 0px;
+			}
+		}
+	}
+	textarea, input[type="text"], input[type="password"], select{
+		width: 75%;
+		font-size: 13px;
+	}
+	input[type="submit"]{
+		border: 1px solid #4E1100;
+		text-align: center;
+		@include border-radius(3px);
+		color: #fff;
+		font-size: 12px;
+		padding: 8px 10px !important;
+		display: block;
+		font-weight: bold;
+		margin: 5px 0;
+		background: image-url("btn_bg.png") repeat 0 0 #6a1802;
+		
+	}
+	.ShippingProviderList{
+		margin-bottom: 5px;
+	}
+	
+	#ConfirmOrder{
+		> form{
+			> h2{
+				height: auto !important;
+				> span{
+					display: none;
+				}
+			}
+		}
+		.BlockContent{
+			h3{
+				margin-top: 20px;
+				margin-bottom: 0px;
+				padding: 0px;
+			}
+		}
+	}
+
+	[data-mw-id="mw_dump_thead1"]{
+		display: none;
+	}
+	.mw_was_tbody{
+		@include clearfix();
+		background-color: #F2F2F2;
+		border: 1px solid #C4C4C4;
+		padding: 8px;
+		margin-bottom: 8px;
+		margin: 5px 0 10px;
+		.mw_was_tr{
+			.mw_was_td{
+				border-bottom: 1px solid #ccc;
+				margin-bottom: 4px;
+				padding: 0px 4px 2px;
+				@include clearfix();
+				span.mw_label{
+					font-weight: bold;
+					color: #333;
+					margin-right: 5px;
+					display: inline-block;
+					float: left;
+				}
+				span.mw_value{
+					float: right;
+					display: inline-block;
+				}
+			}
+			.mw_was_td:first-child{
+				text-align: left !important;
+				padding-bottom: 15px;
+				border-bottom: none;
+			}
+		}		
+	}
+	.SubTotal{
+		border-bottom: 1px solid #C7D7DB;
+		text-align: right;
+		font-size: 13px;
+		margin: 5px 0 15px;
+		> div {			
+			color: #075899;
+			display: inline-block;
+			padding: 8px 3px 3px;
+			font-weight: bold;
+			em{
+				color: #F33;
+				font-weight: normal;
+				font-style: normal;
+			}
+			.EstimateShippingLink{
+				em{
+					color: #075899;
+					text-decoration: underline;
+					font-style: italic;
+				}
+			}
+		}
+	}
+	.CheckoutRedeemCoupon{
+		input{
+			width: auto !important;
+		}
+	}
+	.CheckoutOrderComments{
+		> div{
+			margin-top: 5px;
+		}
+	}
+	> form{
+		padding-left: 50;
+		> ContinueButton{
+			width: auto;
+			margin: auto;
+			text-align: center;
+			margin-left: -50px;
+			input{
+				display: block;
+				width: auto;
+			}
+		}
+	}
+}

@@ -2,17 +2,25 @@
 // @import "globals/_reset";
 
 // Base file contains all the global styles
+
 @import "globals/_base";
+@import "globals/bourbon/_bourbon";
 
-// File for global Uranium stylings
-@import "globals/_uranium.scss";
-
-// Site wide variables
-@import "globals/_variables.scss";
+@import "globals/_uranium";
+@import "globals/_lib";
 
 // Header & Footer
 @import "sections/_header";
 @import "sections/_footer";
 
-// Pages
+// // Pages
 @import "pages/_home";
+@import "pages/_iphone";
+@import "pages/_headphones";
+@import "pages/_cart";
+@import "pages/_checkout";
+@import "pages/_holiday_landing.scss";
+
+// @media all and (min-width: 479px) {
+// 	@import "globals/_landscape.scss";
+// }
