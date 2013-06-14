@@ -8,7 +8,7 @@
 $promo_hostname = "simplesurvey.parseapp.com"
 $is_promo = "false"
 
-replace(/(\w*?\s)(\/__promo__)([\/\w]*?)(\s.*?)\n/) {
+replace(/(\w*?\s)(\/__promo__)([\/\w]*?\s)/) {
   log("MATCH")
   log("[" + $1 + "]")
   log("[" + $2 + "]")
@@ -22,7 +22,7 @@ replace(/(\w*?\s)(\/__promo__)([\/\w]*?)(\s.*?)\n/) {
     $path = "/"
   }
 
-    set("$1" + $path + "$4\n")
+    set("$1" + $path)
 #  }
 
 }
@@ -34,11 +34,12 @@ match($is_promo, "true") {
 #  remove_header("Host")
 #  add_header("Host", $promo_hostname)
 
-parse_headers() {
-  %name = name()
+  parse_headers() {
+    %name = name()
     match(%name, /host/i) {
       value($promo_hostname)
     }
   }
+  export_upstream_host($promo_hostname)
 
 }
