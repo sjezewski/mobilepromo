@@ -191,30 +191,6 @@
   add_mobile_javascript()
 }
 
-# Rewrite meta redirects
-@func XMLNode.rewrite_meta_refresh() {
-  $("/html/head/meta") {
-    %refresh_tag = fetch("@http-equiv")
-    match(normalize(%refresh_tag)) {
-      with(/refresh/i) {
-        attribute("content") {
-          value() {
-            replace(/(.*?;)(URL=)?(.*)/i) {
-              %timeout = $1
-              %prefix = $2
-              %url = $3
-              %url {
-                rewrite_link()
-              }
-              set(%timeout + %prefix + %url)
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 # Rewrite items
 @func XMLNode.rewrite_links() {
   $rewriter_url = "false"
@@ -223,7 +199,7 @@
     $(".//a") {
       attribute("href") {
         value() {
-          rewrite_link()
+          rewrite("link")
         }
       }
     }
@@ -234,7 +210,7 @@
       }
       attribute("href") {
         value() {
-          rewrite_link()
+          rewrite("link")
         }
       }
     }
@@ -242,12 +218,11 @@
     $(".//form") {
       attribute("action") {
         value() {
-          rewrite_link()
+          rewrite("link")
         }
       }
     }
   }
-  rewrite_meta_refresh()
 }
 
 # Absolutize Items 
