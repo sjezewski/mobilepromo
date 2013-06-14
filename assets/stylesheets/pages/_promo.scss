@@ -1,4 +1,63 @@
 .mw_promo {
   
-  
+  .disabled {
+      display:none;
+  }
+
+  .button {
+      border-radius: 5px;
+      border: 1px #8A8A8A solid;
+      background-color: #E8E8E8;
+      color: #555;
+      padding: 5px;
+  }
+
+  #header {
+      background: url("/_moovweb_local_assets_/images/header_bg.jpg") repeat-x 0 0;
+
+
+      h1 {
+	  color: #fff;
+	  font-size: 22px;
+	  font-weight: normal;
+
+	  height: 28px;
+	  display: block;
+	  width: 100%;
+	  padding: 10px;
+      }
+
+      #breadcrumbs { 
+	  color: #A0A0A0;
+	  font-size: 16px;
+	  font-weight: normal;
+	  padding: 10px;
+
+	  .active {
+	      color: #fff;
+	  }
+
+	  
+      }
+
+  }
+
+  #content {
+      margin: 10px;
+  }
+
+  &.submission {
+      
+      #upload > * {
+	  display: block;
+	  float: center;
+	  margin: auto;
+	  padding: 5px;
+      }
+
+      img {
+	  max-height: 100px;
+      }
+  }
+
 }
