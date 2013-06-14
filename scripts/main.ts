@@ -18,9 +18,10 @@ match($method) {
 	
 }
 
+log("CONTENT TYPE:" + $content_type)
 
 match($content_type) {
-  with(/html/) {
+  with(/html|.*/) {
     replace(/fb:/, "fbn_") # Rewrite the xmlns facebook nodes before the html parser clobbers them
     
     # Force UTF-8 encoding. If you'd like to auto-detect the encoding,
@@ -37,6 +38,10 @@ match($content_type) {
   # }
   else() {
     log(concat("Passing through ", $content_type, " unmodified"))
+
+    log("Making exception for promo")
+#    @import html.ts
+
   }
 }
 

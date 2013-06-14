@@ -1,5 +1,7 @@
 # HTML Transformations go here
 
+log("IN HTML")
+
 $("/html") {
   rewrite_links()
   absolutize_srcs()

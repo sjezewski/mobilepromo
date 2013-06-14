@@ -2,6 +2,12 @@
 ### Site Functions
 ####################
 
+
+@func magic_passthrough(Text %relative_link) {
+    $result = "//" + $host + "/__promo__" + %relative_link
+}
+
+
 @func XMLNode.insert_coupon_applier(Text %javascript_path) {
   insert("script", data-keep: "true", type: "text/javascript", src: asset(%javascript_path))
 }

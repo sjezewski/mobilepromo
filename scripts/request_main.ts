@@ -8,7 +8,7 @@
 $promo_hostname = "simplesurvey.parseapp.com"
 $is_promo = "false"
 
-replace(/(\w*?\s)(\/__promo__)([\/\w]*?\s)/) {
+replace(/(\w*?\s)(\/__promo__)([\/\w\?\=]*?\s)/) {
   log("MATCH")
   log("[" + $1 + "]")
   log("[" + $2 + "]")
