@@ -85,3 +85,9 @@ $('./body') {
  		}
  	}
 }
+
+$("//div[@id='Menu']//li[1]") {
+  insert_before("li") {
+    insert_top("a", "Promo", href: magic_passthrough("/"))
+  } 
+}
