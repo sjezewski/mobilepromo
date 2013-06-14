@@ -1,0 +1,420 @@
+Sean-Jezewskis-Mac-mini:debug jezewski$ sudo tcpdump -w dump.txt -s 1500 -i en0 
+tcpdump: listening on en0, link-type EN10MB (Ethernet), capture size 1500 bytes
+^C153 packets captured
+160 packets received by filter
+0 packets dropped by kernel
+Sean-Jezewskis-Mac-mini:debug jezewski$ mv dump.txt broken.dump 
+override rw-r--r--  root/admin for broken.dump? (y/n [n]) y
+Sean-Jezewskis-Mac-mini:debug jezewski$ tcptrace -n -xhttp broken.dump 
+mod_http: Capturing HTTP traffic (port 80)
+1 arg remaining, starting with 'broken.dump'
+Ostermann's tcptrace -- version 6.6.7 -- Thu Nov  4, 2004
+
+152 packets seen, 148 TCP packets traced
+elapsed wallclock time: 0:00:00.017718, 8578 pkts/sec analyzed
+trace file elapsed time: 0:00:03.852914
+TCP connection info:
+  1: 98.112.189.198:58146 - 192.168.0.111:59608 (a2b)       1>    1<
+  2: 70.171.208.98:53761 - 192.168.0.111:59608 (c2d)        3>    3<
+  3: 99.186.17.236:38126 - 192.168.0.111:59608 (e2f)        2>    2<
+  4: 24.15.182.213:53384 - 192.168.0.111:59608 (g2h)        2>    2<
+  5: 205.178.88.18:53250 - 192.168.0.111:59608 (i2j)        3>    3<
+  6: 67.189.53.225:61195 - 192.168.0.111:59608 (k2l)        2>    2<
+  7: 203.206.25.221:52495 - 192.168.0.111:64601 (m2n)       4>    4<
+  8: 50.53.106.64:57370 - 192.168.0.111:59608 (o2p)         3>    3<
+  9: 192.168.0.111:59608 - 199.87.186.221:54202 (q2r)       3>    3<
+ 10: 100.1.111.249:54545 - 192.168.0.111:59608 (s2t)        2>    2<
+ 11: 192.168.0.111:59608 - 70.173.182.232:60875 (u2v)       1>    1<
+ 12: 192.168.0.111:59608 - 75.87.252.100:53803 (w2x)        1>    1<
+ 13: 192.168.0.111:59608 - 76.94.202.71:50161 (y2z)         1>    1<
+ 14: 192.168.0.111:59608 - 64.236.138.1:25648 (aa2ab)       1>    1<
+ 15: 192.168.0.111:59608 - 24.131.170.30:49885 (ac2ad)      1>    1<
+ 16: 192.168.0.111:59608 - 131.191.26.124:52084 (ae2af)     1>    1<
+ 17: 192.168.0.111:59608 - 75.136.131.85:56908 (ag2ah)      1>    1<
+ 18: 192.168.0.111:59608 - 201.214.5.21:51002 (ai2aj)       1>    1<
+ 19: 192.168.0.111:64605 - 121.44.60.94:10488 (ak2al)       1>    1<
+ 20: 192.168.0.111:59608 - 50.141.224.248:63813 (am2an)     1>    1<
+ 21: 192.168.0.111:59608 - 206.136.227.5:55026 (ao2ap)      1>    1<
+ 22: 192.168.0.111:59608 - 98.196.104.226:55337 (aq2ar)     1>    1<
+ 23: 192.168.0.111:59608 - 173.160.116.54:52220 (as2at)     1>    1<
+ 24: 192.168.0.111:59608 - 50.14.206.176:59923 (au2av)      1>    1<
+ 25: 192.168.0.111:59608 - 17.102.42.210:58476 (aw2ax)      1>    1<
+ 26: 192.168.0.111:59608 - 128.252.234.200:51270 (ay2az)    1>    1<
+ 27: 192.168.0.111:59608 - 115.70.179.15:53873 (ba2bb)      1>    1<
+ 28: 192.168.0.111:59608 - 24.34.199.68:58658 (bc2bd)       2>    2<
+ 29: 192.168.0.111:59608 - 68.81.254.220:57554 (be2bf)      1>    1<
+ 30: 192.168.0.111:59608 - 68.47.139.223:47384 (bg2bh)      1>    1<
+ 31: 192.168.0.111:59608 - 63.142.126.201:52216 (bi2bj)     3>    2<
+ 32: 192.168.0.111:64492 - 172.248.131.117:20668 (bk2bl)    1>    1<
+ 33: 192.168.0.111:59608 - 98.227.102.146:55046 (bm2bn)     1>    1<
+ 34: 192.168.0.111:59608 - 71.236.167.53:3160 (bo2bp)       1>    1<
+ 35: 192.168.0.111:59608 - 71.122.235.18:31096 (bq2br)      1>    1<
+ 36: 192.168.0.111:59608 - 76.89.163.39:54795 (bs2bt)       1>    1<
+ 37: 192.168.0.111:59608 - 174.62.77.179:60518 (bu2bv)      1>    1<
+ 38: 192.168.0.111:59608 - 76.14.40.185:53205 (bw2bx)       1>    1<
+ 39: 192.168.0.111:59608 - 207.248.38.50:41397 (by2bz)      1>    1<
+ 40: 192.168.0.111:59608 - 66.241.81.244:50465 (ca2cb)      2>    2<
+ 41: 192.168.0.111:59608 - 72.26.28.79:58934 (cc2cd)        1>    1<
+ 42: 192.168.0.111:59608 - 50.139.48.44:48421 (ce2cf)       1>    1<
+ 43: 192.168.0.111:59608 - 97.77.96.188:37481 (cg2ch)       1>    1<
+ 44: 192.168.0.111:59608 - 173.247.161.154:2432 (ci2cj)     1>    1<
+ 45: 192.168.0.111:59608 - 208.81.48.98:51111 (ck2cl)       1>    1<
+ 46: 192.168.0.111:59608 - 24.12.180.22:54104 (cm2cn)       1>    1<
+ 47: 192.168.0.111:59608 - 68.97.170.143:49610 (co2cp)      1>    1<
+ 48: 192.168.0.111:59608 - 184.183.162.46:49242 (cq2cr)     1>    1<
+ 49: 192.168.0.111:59608 - 75.83.147.142:51754 (cs2ct)      1>    1<
+ 50: 192.168.0.111:59608 - 50.165.25.238:54170 (cu2cv)      1>    1<
+ 51: 192.168.0.111:64619 - 75.126.85.181:80 (cw2cx)         6>    5<  (complete)
+
+Warning : some extracted files are incomplete!
+          Please see -l output for more detail.
+Http module output:
+98.112.189.198:58146 ==> 192.168.0.111:59608 (a2b)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:18.707178 2013 (1371195978.707)
+  Client Last Time:      Fri Jun 14 00:46:18.707121 2013 (1371195978.707)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+70.171.208.98:53761 ==> 192.168.0.111:59608 (c2d)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.806231 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:21.053777 2013 (1371195981.054)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+99.186.17.236:38126 ==> 192.168.0.111:59608 (e2f)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.806345 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:20.848082 2013 (1371195980.848)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+24.15.182.213:53384 ==> 192.168.0.111:59608 (g2h)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.806244 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:20.879615 2013 (1371195980.880)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+205.178.88.18:53250 ==> 192.168.0.111:59608 (i2j)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.805980 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:20.872378 2013 (1371195980.872)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+67.189.53.225:61195 ==> 192.168.0.111:59608 (k2l)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.805443 2013 (1371195980.805)
+  Client Last Time:      Fri Jun 14 00:46:20.805392 2013 (1371195980.805)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+203.206.25.221:52495 ==> 192.168.0.111:64601 (m2n)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:22.560036 2013 (1371195982.560)
+  Client Last Time:      Fri Jun 14 00:46:22.559928 2013 (1371195982.560)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+50.53.106.64:57370 ==> 192.168.0.111:59608 (o2p)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.805993 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:21.041041 2013 (1371195981.041)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 199.87.186.221:54202 (q2r)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.829079 2013 (1371195980.829)
+  Client Last Time:      Fri Jun 14 00:46:20.806195 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+100.1.111.249:54545 ==> 192.168.0.111:59608 (s2t)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.805928 2013 (1371195980.806)
+  Client Last Time:      Fri Jun 14 00:46:21.093173 2013 (1371195981.093)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 70.173.182.232:60875 (u2v)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.042750 2013 (1371195981.043)
+  Client Last Time:      Fri Jun 14 00:46:20.805811 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 75.87.252.100:53803 (w2x)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.094165 2013 (1371195981.094)
+  Client Last Time:      Fri Jun 14 00:46:20.805826 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 76.94.202.71:50161 (y2z)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.833562 2013 (1371195980.834)
+  Client Last Time:      Fri Jun 14 00:46:20.805839 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 64.236.138.1:25648 (aa2ab)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.014446 2013 (1371195981.014)
+  Client Last Time:      Fri Jun 14 00:46:20.805852 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 24.131.170.30:49885 (ac2ad)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.076251 2013 (1371195981.076)
+  Client Last Time:      Fri Jun 14 00:46:20.805865 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 131.191.26.124:52084 (ae2af)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.032316 2013 (1371195981.032)
+  Client Last Time:      Fri Jun 14 00:46:20.805878 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 75.136.131.85:56908 (ag2ah)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.893281 2013 (1371195980.893)
+  Client Last Time:      Fri Jun 14 00:46:20.805891 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 201.214.5.21:51002 (ai2aj)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.962539 2013 (1371195980.963)
+  Client Last Time:      Fri Jun 14 00:46:20.805903 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:64605 ==> 121.44.60.94:10488 (ak2al)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.205796 2013 (1371195981.206)
+  Client Last Time:      Fri Jun 14 00:46:20.805916 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 50.141.224.248:63813 (am2an)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.904193 2013 (1371195980.904)
+  Client Last Time:      Fri Jun 14 00:46:20.805941 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 206.136.227.5:55026 (ao2ap)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.094361 2013 (1371195981.094)
+  Client Last Time:      Fri Jun 14 00:46:20.805954 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 98.196.104.226:55337 (aq2ar)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.070069 2013 (1371195981.070)
+  Client Last Time:      Fri Jun 14 00:46:20.805967 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 173.160.116.54:52220 (as2at)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.074714 2013 (1371195981.075)
+  Client Last Time:      Fri Jun 14 00:46:20.806005 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 50.14.206.176:59923 (au2av)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.160198 2013 (1371195981.160)
+  Client Last Time:      Fri Jun 14 00:46:20.806030 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 17.102.42.210:58476 (aw2ax)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.867646 2013 (1371195980.868)
+  Client Last Time:      Fri Jun 14 00:46:20.806043 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 128.252.234.200:51270 (ay2az)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.855606 2013 (1371195980.856)
+  Client Last Time:      Fri Jun 14 00:46:20.806056 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 115.70.179.15:53873 (ba2bb)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.250569 2013 (1371195981.251)
+  Client Last Time:      Fri Jun 14 00:46:20.806068 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 24.34.199.68:58658 (bc2bd)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.872435 2013 (1371195981.872)
+  Client Last Time:      Fri Jun 14 00:46:21.872485 2013 (1371195981.872)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 68.81.254.220:57554 (be2bf)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.096633 2013 (1371195981.097)
+  Client Last Time:      Fri Jun 14 00:46:20.806094 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 68.47.139.223:47384 (bg2bh)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.877680 2013 (1371195980.878)
+  Client Last Time:      Fri Jun 14 00:46:20.806107 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 63.142.126.201:52216 (bi2bj)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.950373 2013 (1371195981.950)
+  Client Last Time:      Fri Jun 14 00:46:21.950457 2013 (1371195981.950)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:64492 ==> 172.248.131.117:20668 (bk2bl)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.832401 2013 (1371195980.832)
+  Client Last Time:      Fri Jun 14 00:46:20.806132 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 98.227.102.146:55046 (bm2bn)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.898873 2013 (1371195980.899)
+  Client Last Time:      Fri Jun 14 00:46:20.806145 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 71.236.167.53:3160 (bo2bp)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.973552 2013 (1371195980.974)
+  Client Last Time:      Fri Jun 14 00:46:20.806157 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 71.122.235.18:31096 (bq2br)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.896080 2013 (1371195980.896)
+  Client Last Time:      Fri Jun 14 00:46:20.806169 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 76.89.163.39:54795 (bs2bt)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.175338 2013 (1371195981.175)
+  Client Last Time:      Fri Jun 14 00:46:20.806182 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 174.62.77.179:60518 (bu2bv)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.827733 2013 (1371195980.828)
+  Client Last Time:      Fri Jun 14 00:46:20.806207 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 76.14.40.185:53205 (bw2bx)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.819855 2013 (1371195980.820)
+  Client Last Time:      Fri Jun 14 00:46:20.806219 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 207.248.38.50:41397 (by2bz)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.874137 2013 (1371195980.874)
+  Client Last Time:      Fri Jun 14 00:46:20.806256 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 66.241.81.244:50465 (ca2cb)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.042873 2013 (1371195981.043)
+  Client Last Time:      Fri Jun 14 00:46:20.825050 2013 (1371195980.825)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 72.26.28.79:58934 (cc2cd)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.296519 2013 (1371195981.297)
+  Client Last Time:      Fri Jun 14 00:46:20.806281 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 50.139.48.44:48421 (ce2cf)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.045160 2013 (1371195981.045)
+  Client Last Time:      Fri Jun 14 00:46:20.806294 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 97.77.96.188:37481 (cg2ch)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.874647 2013 (1371195980.875)
+  Client Last Time:      Fri Jun 14 00:46:20.806307 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 173.247.161.154:2432 (ci2cj)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.032438 2013 (1371195981.032)
+  Client Last Time:      Fri Jun 14 00:46:20.806319 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 208.81.48.98:51111 (ck2cl)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.057221 2013 (1371195981.057)
+  Client Last Time:      Fri Jun 14 00:46:20.806332 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 24.12.180.22:54104 (cm2cn)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.883944 2013 (1371195980.884)
+  Client Last Time:      Fri Jun 14 00:46:20.806357 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 68.97.170.143:49610 (co2cp)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.082665 2013 (1371195981.083)
+  Client Last Time:      Fri Jun 14 00:46:20.806371 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 184.183.162.46:49242 (cq2cr)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.032362 2013 (1371195981.032)
+  Client Last Time:      Fri Jun 14 00:46:20.806383 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 75.83.147.142:51754 (cs2ct)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:21.002310 2013 (1371195981.002)
+  Client Last Time:      Fri Jun 14 00:46:20.806396 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:59608 ==> 50.165.25.238:54170 (cu2cv)
+  Server Syn Time:              <the epoch>        (0.000)
+  Client Syn Time:              <the epoch>        (0.000)
+  Server Last Time:      Fri Jun 14 00:46:20.879620 2013 (1371195980.880)
+  Client Last Time:      Fri Jun 14 00:46:20.806408 2013 (1371195980.806)
+No additional information available, beginning of connection (SYNs) were not found in trace file.
+192.168.0.111:64619 ==> 75.126.85.181:80 (cw2cx)
+  Server Syn Time:      Fri Jun 14 00:46:21.115094 2013 (1371195981.115)
+  Client Syn Time:      Fri Jun 14 00:46:21.069238 2013 (1371195981.069)
+  Server Fin Time:      Fri Jun 14 00:46:21.163331 2013 (1371195981.163)
+  Client Fin Time:      Fri Jun 14 00:46:21.163691 2013 (1371195981.164)
+    GET /submission/new HTTP/1.0
+    Response Code:       404 (Not Found)
+    Request Length:      473
+    Reply Length:        392
+    Content Length:      184
+    Content Type  :      text/html;
+    Time request sent:   Fri Jun 14 00:46:21.115355 2013 (1371195981.115)
+    Time reply started:  Fri Jun 14 00:46:21.163325 2013 (1371195981.163)
+    Time reply ACKed:    Fri Jun 14 00:46:21.163398 2013 (1371195981.163)
+    Elapsed time:  48 ms (request to first byte sent)
+    Elapsed time:  48 ms (request to content ACKed)
+Sean-Jezewskis-Mac-mini:debug jezewski$ mate .
+Sean-Jezewskis-Mac-mini:debug jezewski$ dig simplesurvey.parseapp.com
+
+; <<>> DiG 9.6.0-APPLE-P2 <<>> simplesurvey.parseapp.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60060
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 4, ADDITIONAL: 3
+
+;; QUESTION SECTION:
+;simplesurvey.parseapp.com.     IN      A
+
+;; ANSWER SECTION:
+simplesurvey.parseapp.com. 197  IN      CNAME   parseapp.com.
+parseapp.com.                   60      IN      A       54.225.174.154
+
+;; AUTHORITY SECTION:
+parseapp.com.           161665  IN      NS      ns-814.awsdns-37.net.
+parseapp.com.                   161665  IN      NS      ns-1982.awsdns-55.co.uk.
+parseapp.com.                           161665  IN      NS      ns-1144.awsdns-15.org.
+parseapp.com.                                   161665  IN      NS      ns-149.awsdns-18.com.
+
+;; ADDITIONAL SECTION:
+ns-814.awsdns-37.net.   161665  IN      A       205.251.195.46
+ns-1144.awsdns-15.org.  161665  IN      A       205.251.196.120
+ns-1982.awsdns-55.co.uk. 161665 IN      A       205.251.199.190
+
+;; Query time: 48 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1)
+;; WHEN: Fri Jun 14 00:47:08 2013
+;; MSG SIZE  rcvd: 258
+
+Sean-Jezewskis-Mac-mini:debug jezewski$ 
