@@ -13,7 +13,17 @@ or to run your server with the `-auto-hosts=true` option.
 
 This project illustrates how to link to a microsite from the mobile site. The microsite keeps the look and feel of the mobile site you set up, but has content only linked to on mobile.
 
+### MicroSite
+
 Firstly, you must set up your webapp. We used [Parse](http://parse.com) to set up a simple survey site, which can be seen [here](http://simplesurvey.parseapp.com). The survey asks the user to upload a photo, then give feedback on some products. In return, the user gets a promotional code.
+
+Parse has [some great tutorials](https://parse.com/docs/cloud_code_guide) to help you get started. Once your microapp is up and running, you can begin to integrate it with your Moovweb project. Follow these steps:
+
+1. Sign up for Parse
+2. Create a project or [clone Sean's project](https://github.com/sjezewski/micropromo)
+3. Push a project live
+4. Get the domain
+5. Use the domain in your Tritium project
 
 ### Link
 
@@ -30,7 +40,7 @@ The href value uses a special function written for this project. There are alter
 There are a few options to redirect users from the mobile site to the web app you just set up:
 
 - [Set up a new subdomain using Moovweb](#Subdomain)
-- [Use a unique path](#Unique+Path)
+- [Use a unique path](#Unique+Path) - **seen in this demo**
 
 #### Subdomain
 
